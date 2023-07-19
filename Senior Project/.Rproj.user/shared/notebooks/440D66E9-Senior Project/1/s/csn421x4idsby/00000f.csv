@@ -1,0 +1,5 @@
+"0","ggplot(data = game_s3_4) +"
+"0","  geom_point(mapping = aes(x = Year, y = Sales, color = Genre))+"
+"0","  facet_wrap(""Genre"", nrow = 3, scales = ""free"")+"
+"0","  theme_bw()+"
+"0","  labs(title = ""Global sales of Wii game genre by year(released year)"", y= ""Total worldwide Sales"", x = ""Released Year"")"

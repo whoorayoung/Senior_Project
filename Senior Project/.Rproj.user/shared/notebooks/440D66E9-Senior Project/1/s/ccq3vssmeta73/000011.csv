@@ -1,0 +1,2 @@
+"0","  #scale_y_continuous(trans = ""sqrt"")+"
+"0","  #facet_wrap(""Genre"",nrow = 1)"

@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.242">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Senior Project</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="Senior Project_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Senior Project_files/libs/quarto-html/quarto.js"></script>
+<script src="Senior Project_files/libs/quarto-html/popper.min.js"></script>
+<script src="Senior Project_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Senior Project_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Senior Project_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Senior Project_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Senior Project_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Senior Project_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Senior Project_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Senior Project</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">echo =</span> <span class="cn">TRUE</span>, <span class="at">message =</span> <span class="cn">FALSE</span>, <span class="at">warning =</span> <span class="cn">FALSE</span>, <span class="at">error =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+<p>In this 21st century, game has become one of the biggest entertainments in the world. Also, it is one of the way that people can earn money through E-sports as a game player and streaming a game as a game streamer. There are many games brands that people can choose what to play in their taste. As the game industries are growing bigger and being competitive, more various kinds of games are published from many different game companies such as ‘Nintendo’, ‘Play-station’, and ‘X-Box’.</p>
+</section>
+<section id="read-file" class="level2">
+<h2 class="anchored" data-anchor-id="read-file">Read File</h2>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">library</span>(pander)</span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="fu">library</span>(directlabels)</span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="fu">library</span>(ggrepel)</span>
+<span id="cb2-9"><a href="#cb2-9"></a><span class="fu">library</span>(mosaic)</span>
+<span id="cb2-10"><a href="#cb2-10"></a><span class="fu">library</span>(DT)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>game_s <span class="ot">&lt;-</span> rio<span class="sc">::</span><span class="fu">import</span>(<span class="st">"vgsales.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="trend" class="level2">
+<h2 class="anchored" data-anchor-id="trend">Trend</h2>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>game_t <span class="ot">&lt;-</span> game_s2 <span class="sc">%&gt;%</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a>  <span class="fu">filter</span>(Year <span class="sc">&gt;</span> <span class="dv">2000</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a>  <span class="fu">filter</span>(Year <span class="sc">!=</span> <span class="st">"N/A"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-error">
+<pre><code>Error in filter(., Year &gt; 2000): object 'game_s2' not found</code></pre>
+</div>
+</div>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="co">#write.csv(game_t, file = "game_sales.csv")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>game_s2 <span class="ot">&lt;-</span> game_s <span class="sc">%&gt;%</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a>    <span class="fu">filter</span>(Year <span class="sc">!=</span> <span class="st">"N/A"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="fu">filter</span>(Year <span class="sc">&gt;</span> <span class="dv">2000</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a>   <span class="fu">subset</span>(<span class="at">select =</span> <span class="fu">c</span>(Year, NA_Sales, EU_Sales, JP_Sales, Other_Sales, Global_Sales)) <span class="sc">%&gt;%</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a><span class="fu">group_by</span> (Year) <span class="sc">%&gt;%</span></span>
+<span id="cb7-6"><a href="#cb7-6"></a>  <span class="fu">summarize</span>(<span class="at">NAsales =</span> <span class="fu">sum</span>(NA_Sales),<span class="at">EUsales =</span> <span class="fu">sum</span>(EU_Sales),<span class="at">JPsales =</span> <span class="fu">sum</span>(JP_Sales),<span class="at">OCsales =</span> <span class="fu">sum</span>(Other_Sales),<span class="at">Global =</span> <span class="fu">sum</span>(Global_Sales)) </span>
+<span id="cb7-7"><a href="#cb7-7"></a></span>
+<span id="cb7-8"><a href="#cb7-8"></a><span class="fu">ggplot</span>(<span class="at">data =</span> game_s2) <span class="sc">+</span> </span>
+<span id="cb7-9"><a href="#cb7-9"></a><span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> NAsales, <span class="at">colour =</span> <span class="st">"NAsales"</span>), <span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span> </span>
+<span id="cb7-10"><a href="#cb7-10"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> EUsales, <span class="at">colour =</span> <span class="st">"EUsales"</span>), <span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span> </span>
+<span id="cb7-11"><a href="#cb7-11"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> JPsales, <span class="at">colour =</span> <span class="st">"JPsales"</span>), <span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span> </span>
+<span id="cb7-12"><a href="#cb7-12"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> OCsales, <span class="at">colour =</span> <span class="st">"OCsales"</span>), <span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span> </span>
+<span id="cb7-13"><a href="#cb7-13"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Sales Trend over the years"</span>, <span class="at">y =</span> <span class="st">"Sales(Millions)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="Senior-Project_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="compare-each-countries-by-sales" class="level2">
+<h2 class="anchored" data-anchor-id="compare-each-countries-by-sales">Compare each countries by Sales</h2>
+<p>This box-plot shows which country between North America, Europe, and Japan has the most interest in game industry. North America has the highest median and wide range that explains to us how much the game industry is huge up there comparing to other two countries.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>game_s4 <span class="ot">&lt;-</span> game_s <span class="sc">%&gt;%</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="st">"NA_Sales"</span><span class="sc">:</span><span class="st">"Global_Sales"</span>, <span class="at">names_to =</span> <span class="st">"Country_Sales"</span>, <span class="at">values_to =</span> <span class="st">"Sales"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a>  <span class="fu">group_by</span>(Country_Sales) <span class="sc">%&gt;%</span></span>
+<span id="cb8-4"><a href="#cb8-4"></a>  <span class="fu">filter</span>(Year <span class="sc">!=</span> <span class="st">"N/A"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb8-5"><a href="#cb8-5"></a>  <span class="fu">filter</span>(Country_Sales <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"NA_Sales"</span>, <span class="st">"EU_Sales"</span>, <span class="st">"JP_Sales"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb8-6"><a href="#cb8-6"></a>  <span class="co">#filter(Platform %in% c("Wii", "PS4", "PC", "XB")) %&gt;%</span></span>
+<span id="cb8-7"><a href="#cb8-7"></a>  <span class="co">#filter(Year &gt; 2004) %&gt;%</span></span>
+<span id="cb8-8"><a href="#cb8-8"></a>  <span class="fu">filter</span>(Rank <span class="sc">&lt;</span> <span class="dv">199</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> game_s4) <span class="sc">+</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">geom_boxplot</span>()<span class="sc">+</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a>  <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">fct_reorder</span>(Country_Sales, Sales, <span class="at">na.rm =</span> <span class="cn">TRUE</span>, <span class="at">.desc =</span> <span class="cn">TRUE</span>)) <span class="sc">+</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a>  <span class="fu">aes</span>(<span class="at">y =</span> Sales) <span class="sc">+</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a>  <span class="fu">aes</span>(<span class="at">fill =</span> Country_Sales)<span class="sc">+</span></span>
+<span id="cb9-6"><a href="#cb9-6"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Each countries' sales of game"</span>, <span class="at">x =</span> <span class="st">"Country"</span>, <span class="at">y =</span> <span class="st">"Sales(Million)"</span>)<span class="sc">+</span></span>
+<span id="cb9-7"><a href="#cb9-7"></a>  <span class="fu">coord_cartesian</span>(<span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">25</span>))<span class="sc">+</span></span>
+<span id="cb9-8"><a href="#cb9-8"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="Senior-Project_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="platform" class="level2">
+<h2 class="anchored" data-anchor-id="platform">Platform</h2>
+<p>This histogram shows which platform do people prefer to use when they play games. The Wii is the most famous platform people like to play. On the contrary, PS4 has the least preference to have it. You can tell from this graph Wii platform is having many consumers and occupying big proportion in game industry.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>game_s <span class="ot">&lt;-</span> game_s <span class="sc">%&gt;%</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a>  <span class="fu">filter</span>(Year <span class="sc">!=</span> <span class="st">"N/A"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>game_s2 <span class="ot">&lt;-</span> game_s <span class="sc">%&gt;%</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="st">"NA_Sales"</span><span class="sc">:</span><span class="st">"Global_Sales"</span>, <span class="at">names_to =</span> <span class="st">"Country_Sales"</span>, <span class="at">values_to =</span> <span class="st">"Sales"</span>)</span>
+<span id="cb11-3"><a href="#cb11-3"></a></span>
+<span id="cb11-4"><a href="#cb11-4"></a>game_s2_1 <span class="ot">&lt;-</span> game_s2 <span class="sc">%&gt;%</span></span>
+<span id="cb11-5"><a href="#cb11-5"></a>  <span class="fu">group_by</span>(Country_Sales) <span class="sc">%&gt;%</span></span>
+<span id="cb11-6"><a href="#cb11-6"></a>  <span class="fu">filter</span>(Year <span class="sc">!=</span> <span class="st">"N/A"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb11-7"><a href="#cb11-7"></a>  <span class="fu">filter</span>(Country_Sales <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"NA_Sales"</span>, <span class="st">"EU_Sales"</span>, <span class="st">"JP_Sales"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb11-8"><a href="#cb11-8"></a>  <span class="fu">filter</span>(Platform <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Wii"</span>, <span class="st">"PS4"</span>, <span class="st">"PC"</span>, <span class="st">"XB"</span>))</span>
+<span id="cb11-9"><a href="#cb11-9"></a>  <span class="co">#filter(Year &gt; 2000)</span></span>
+<span id="cb11-10"><a href="#cb11-10"></a>  <span class="co">#filter(Rank &lt; 499)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> game_s2_1,</span>
+<span id="cb12-2"><a href="#cb12-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> Platform, <span class="at">fill=</span>Platform)) <span class="sc">+</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a>  <span class="fu">geom_histogram</span>(<span class="at">alpha=</span><span class="dv">1</span>, <span class="at">position=</span><span class="st">"identity"</span>, <span class="at">stat=</span><span class="st">"count"</span>)<span class="sc">+</span></span>
+<span id="cb12-4"><a href="#cb12-4"></a>  <span class="co">#coord_cartesian(ylim = c(0, 200))+</span></span>
+<span id="cb12-5"><a href="#cb12-5"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="Senior-Project_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="publisher" class="level2">
+<h2 class="anchored" data-anchor-id="publisher">Publisher</h2>
+<p>The Take-Two Interactive Publisher has many games that are released.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>game_s2_2 <span class="ot">&lt;-</span> game_s2 <span class="sc">%&gt;%</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a>  <span class="fu">group_by</span>(Country_Sales) <span class="sc">%&gt;%</span></span>
+<span id="cb13-3"><a href="#cb13-3"></a>  <span class="fu">filter</span>(Year <span class="sc">!=</span> <span class="st">"N/A"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb13-4"><a href="#cb13-4"></a>  <span class="fu">filter</span>(Country_Sales <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"NA_Sales"</span>, <span class="st">"EU_Sales"</span>, <span class="st">"JP_Sales"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb13-5"><a href="#cb13-5"></a>  <span class="fu">filter</span>(Platform <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Wii"</span>, <span class="st">"PS4"</span>, <span class="st">"PC"</span>, <span class="st">"XB"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb13-6"><a href="#cb13-6"></a>  <span class="fu">filter</span>(Publisher <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Nintendo"</span>, <span class="st">"Microsoft Game Studios"</span>, <span class="st">"Take-Two Interactive"</span>, <span class="st">"Sony Computer Entertainment"</span>))</span>
+<span id="cb13-7"><a href="#cb13-7"></a>  <span class="co">#filter(Year &gt; 2000)</span></span>
+<span id="cb13-8"><a href="#cb13-8"></a>  <span class="co">#filter(Rank &lt; 499)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> game_s2_2,</span>
+<span id="cb14-2"><a href="#cb14-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> Publisher, <span class="at">fill=</span> Publisher)) <span class="sc">+</span></span>
+<span id="cb14-3"><a href="#cb14-3"></a>  <span class="fu">geom_histogram</span>(<span class="at">alpha=</span><span class="dv">1</span>, <span class="at">position=</span><span class="st">"identity"</span>, <span class="at">stat=</span><span class="st">"count"</span>)<span class="sc">+</span></span>
+<span id="cb14-4"><a href="#cb14-4"></a>  <span class="co">#coord_cartesian(ylim = c(0, 200))+</span></span>
+<span id="cb14-5"><a href="#cb14-5"></a>  <span class="fu">theme_bw</span>()<span class="sc">+</span></span>
+<span id="cb14-6"><a href="#cb14-6"></a>  <span class="fu">scale_x_discrete</span>(<span class="at">guide =</span> <span class="fu">guide_axis</span>(<span class="at">n.dodge =</span> <span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="Senior-Project_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="wii-sales-of-each-game-genres-by-year" class="level2">
+<h2 class="anchored" data-anchor-id="wii-sales-of-each-game-genres-by-year">Wii sales of each game genres by year</h2>
+<p>This charts are showing sales of ‘Wii’ games in different genres between Europe, North America, Japan, and globally. As Wii games’ are popular platform that makes me wonder how many people in the world are having interest in and which games they like to play.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>game_s3 <span class="ot">&lt;-</span> game_s2 <span class="sc">%&gt;%</span></span>
+<span id="cb15-2"><a href="#cb15-2"></a>  <span class="fu">filter</span>(Platform <span class="sc">==</span> <span class="st">"Wii"</span> <span class="sc">&amp;</span> Year <span class="sc">&gt;</span> <span class="dv">2000</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb15-3"><a href="#cb15-3"></a>  <span class="fu">filter</span>(Year <span class="sc">!=</span> <span class="st">"N/A"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="north-americas-sales" class="level2">
+<h2 class="anchored" data-anchor-id="north-americas-sales">North America’s sales</h2>
+<p>During 2006, in North America, when sports game genre were released, it has about 41 million sales which has the most sales in total decades.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>game_s3_1 <span class="ot">&lt;-</span>  game_s3 <span class="sc">%&gt;%</span></span>
+<span id="cb16-2"><a href="#cb16-2"></a>  <span class="fu">filter</span>(Country_Sales <span class="sc">==</span> <span class="st">"NA_Sales"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> game_s3_1) <span class="sc">+</span></span>
+<span id="cb17-2"><a href="#cb17-2"></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Sales, <span class="at">color =</span> Genre))<span class="sc">+</span></span>
+<span id="cb17-3"><a href="#cb17-3"></a>  <span class="fu">theme_bw</span>()<span class="sc">+</span></span>
+<span id="cb17-4"><a href="#cb17-4"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"North America's sales of Wii game genre by year(released year)"</span>, <span class="at">y =</span> <span class="st">"Sales(Millions)"</span>, <span class="at">x =</span> <span class="st">"Released Year"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="Senior-Project_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid" width="672"></p>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>  <span class="co">#scale_y_continuous(trans = "sqrt")+</span></span>
+<span id="cb18-2"><a href="#cb18-2"></a>  <span class="co">#facet_wrap("Genre",nrow = 1)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="europes-sales" class="level2">
+<h2 class="anchored" data-anchor-id="europes-sales">Europe’s sales</h2>
+<p>In Europe as well, it is showing same result that sports game genre in 2006 has the most sales, but low sales than North America. It is about 29 millions.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>game_s3_2 <span class="ot">&lt;-</span>  game_s3 <span class="sc">%&gt;%</span></span>
+<span id="cb19-2"><a href="#cb19-2"></a>  <span class="fu">filter</span>(Country_Sales <span class="sc">==</span> <span class="st">"EU_Sales"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> game_s3_2) <span class="sc">+</span></span>
+<span id="cb20-2"><a href="#cb20-2"></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Sales, <span class="at">color =</span> Genre))<span class="sc">+</span></span>
+<span id="cb20-3"><a href="#cb20-3"></a>  <span class="fu">theme_bw</span>()<span class="sc">+</span></span>
+<span id="cb20-4"><a href="#cb20-4"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Europe's sales of Wii game genre by year(released year)"</span>, <span class="at">y =</span> <span class="st">"Sales(Millions)"</span>, <span class="at">x =</span> <span class="st">"Released Year"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="Senior-Project_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="japans-sales" class="level2">
+<h2 class="anchored" data-anchor-id="japans-sales">Japan’s sales</h2>
+<p>In Japan, it shows spread of sales. Sports game genres were most popular during 2006 and 2007. However, in 2008, the most sales of genre game has changed to role-playing. The highest sales was platform genre games in 2009.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a>game_s3_3 <span class="ot">&lt;-</span>  game_s3 <span class="sc">%&gt;%</span></span>
+<span id="cb21-2"><a href="#cb21-2"></a>  <span class="fu">filter</span>(Country_Sales <span class="sc">==</span> <span class="st">"JP_Sales"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> game_s3_3) <span class="sc">+</span></span>
+<span id="cb22-2"><a href="#cb22-2"></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Sales, <span class="at">color =</span> Genre))<span class="sc">+</span></span>
+<span id="cb22-3"><a href="#cb22-3"></a>  <span class="fu">theme_bw</span>()<span class="sc">+</span></span>
+<span id="cb22-4"><a href="#cb22-4"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Japan's sales of Wii game genre by year(released year)"</span>, <span class="at">y =</span> <span class="st">"Sales(Millions)"</span>, <span class="at">x =</span> <span class="st">"Released Year"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="Senior-Project_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="global-sales" class="level2">
+<h2 class="anchored" data-anchor-id="global-sales">Global sales</h2>
+<p>This graph shows the sales all over the world. As you can see many people in the world played Wii sports genre game during 2006 when it has released.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>game_s3_4 <span class="ot">&lt;-</span>  game_s3 <span class="sc">%&gt;%</span></span>
+<span id="cb23-2"><a href="#cb23-2"></a>  <span class="fu">filter</span>(Country_Sales <span class="sc">==</span> <span class="st">"Global_Sales"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> game_s3_4) <span class="sc">+</span></span>
+<span id="cb24-2"><a href="#cb24-2"></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Sales, <span class="at">color =</span> Genre))<span class="sc">+</span></span>
+<span id="cb24-3"><a href="#cb24-3"></a>  <span class="fu">facet_wrap</span>(<span class="st">"Genre"</span>, <span class="at">nrow =</span> <span class="dv">3</span>, <span class="at">scales =</span> <span class="st">"free"</span>)<span class="sc">+</span></span>
+<span id="cb24-4"><a href="#cb24-4"></a>  <span class="fu">theme_bw</span>()<span class="sc">+</span></span>
+<span id="cb24-5"><a href="#cb24-5"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Global sales of Wii game genre by year(released year)"</span>, <span class="at">y=</span> <span class="st">"Total worldwide Sales"</span>, <span class="at">x =</span> <span class="st">"Released Year"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="Senior-Project_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid" width="1248"></p>
+</div>
+</div>
+</section>
+<section id="sales-by-game" class="level2">
+<h2 class="anchored" data-anchor-id="sales-by-game">Sales by Game</h2>
+<p>The most highest sales about 41 million of game of rank in the Top 10 in overall sales after 2000 was Wii Sports from Nintendo company. As you can see most games in the top rank are from Wii platform and Nintendo Publisher. We can tell that Wii and Nintendo games are being loved from many people.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a>game_s5 <span class="ot">&lt;-</span> game_s <span class="sc">%&gt;%</span></span>
+<span id="cb25-2"><a href="#cb25-2"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="st">"NA_Sales"</span><span class="sc">:</span><span class="st">"Global_Sales"</span>, <span class="at">names_to =</span> <span class="st">"Country_Sales"</span>, <span class="at">values_to =</span> <span class="st">"Sales"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb25-3"><a href="#cb25-3"></a>  <span class="fu">select</span>(Rank, Name, Year, Country_Sales, Sales, Platform, Publisher) <span class="sc">%&gt;%</span></span>
+<span id="cb25-4"><a href="#cb25-4"></a>  <span class="fu">group_by</span>(Country_Sales) <span class="sc">%&gt;%</span></span>
+<span id="cb25-5"><a href="#cb25-5"></a>  <span class="fu">filter</span>(Year <span class="sc">!=</span> <span class="st">"N/A"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb25-6"><a href="#cb25-6"></a>  <span class="fu">filter</span>(Country_Sales <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"NA_Sales"</span>, <span class="st">"EU_Sales"</span>, <span class="st">"JP_Sales"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb25-7"><a href="#cb25-7"></a>  <span class="co">#filter(Platform %in% c("Wii", "PS4", "PC", "XB")) %&gt;%</span></span>
+<span id="cb25-8"><a href="#cb25-8"></a>  <span class="fu">filter</span>(Year <span class="sc">&gt;</span> <span class="dv">2000</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb25-9"><a href="#cb25-9"></a>  <span class="fu">filter</span>(Rank <span class="sc">&lt;</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> game_s5, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Name, <span class="at">y =</span> Sales, <span class="at">color =</span> Country_Sales))<span class="sc">+</span></span>
+<span id="cb26-2"><a href="#cb26-2"></a>  <span class="fu">geom_line</span>(<span class="at">show.legend =</span> <span class="cn">FALSE</span>, <span class="fu">aes</span>(<span class="at">group =</span> Country_Sales))<span class="sc">+</span></span>
+<span id="cb26-3"><a href="#cb26-3"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>,<span class="at">show.legend =</span> <span class="cn">FALSE</span>)<span class="sc">+</span></span>
+<span id="cb26-4"><a href="#cb26-4"></a>  <span class="fu">theme_bw</span>()<span class="sc">+</span></span>
+<span id="cb26-5"><a href="#cb26-5"></a>  <span class="fu">geom_dl</span>(<span class="fu">aes</span>(<span class="at">label =</span> Country_Sales), <span class="at">method =</span> <span class="fu">list</span>(<span class="fu">dl.combine</span>(<span class="st">"last.points"</span>)), <span class="at">cex =</span> <span class="fl">0.8</span>, <span class="at">vjust =</span> <span class="dv">5</span>)<span class="sc">+</span></span>
+<span id="cb26-6"><a href="#cb26-6"></a>  <span class="co">#geom_vline(aes(xintercept = Name),data = ~ filter(.x, as.numeric(Year) %% 1 == 0))+</span></span>
+<span id="cb26-7"><a href="#cb26-7"></a>  <span class="fu">scale_x_discrete</span>(<span class="at">guide =</span> <span class="fu">guide_axis</span>(<span class="at">n.dodge =</span> <span class="dv">2</span>))<span class="sc">+</span></span>
+<span id="cb26-8"><a href="#cb26-8"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">"none"</span>)<span class="sc">+</span></span>
+<span id="cb26-9"><a href="#cb26-9"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major.x  =</span> <span class="fu">element_blank</span>())<span class="sc">+</span></span>
+<span id="cb26-10"><a href="#cb26-10"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Sales of games of rank in the Top 10 after 2000"</span>, </span>
+<span id="cb26-11"><a href="#cb26-11"></a>       <span class="at">x =</span> <span class="st">"Games name"</span>, <span class="at">y =</span> <span class="st">"Slaes(Million)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="Senior-Project_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid" width="1200"></p>
+</div>
+</div>
+<p>Therefore, we can know that many people in the world has huge interest in playing games. The more people spend on games , gaming industry will grow faster.</p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

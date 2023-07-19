@@ -1,0 +1,3 @@
+"0","game_s3 <- game_s2 %>%"
+"0","  filter(Platform == ""Wii"" & Year > 2000) %>%"
+"0","  filter(Year != ""N/A"")"

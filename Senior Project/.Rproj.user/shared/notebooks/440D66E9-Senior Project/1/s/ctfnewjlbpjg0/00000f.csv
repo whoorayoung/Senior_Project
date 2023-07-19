@@ -1,0 +1,6 @@
+"0","ggplot(data = game_s2_1,"
+"0","       aes(x = Platform, fill=Platform)) +"
+"0","  geom_histogram(alpha=1, position=""identity"", stat=""count"")+"
+"0","  #coord_cartesian(ylim = c(0, 200))+"
+"0","  theme_bw()"
+"2","Warning: [38;5;232mIgnoring unknown parameters: `binwidth`, `bins`, and `pad`[39m"

@@ -1,0 +1,8 @@
+"0","ggplot(data = game_s4) +"
+"0","  geom_boxplot()+"
+"0","  aes(x = fct_reorder(Country_Sales, Sales, na.rm = TRUE, .desc = TRUE)) +"
+"0","  aes(y = Sales) +"
+"0","  aes(fill = Country_Sales)+"
+"0","  labs(title = ""Each countries' sales of game"", x = ""Country"", y = ""Sales(Million)"")+"
+"0","  coord_cartesian(ylim = c(0, 25))+"
+"0","  theme_bw()"

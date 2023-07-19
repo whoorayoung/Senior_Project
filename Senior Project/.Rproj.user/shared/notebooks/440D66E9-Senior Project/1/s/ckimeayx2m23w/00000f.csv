@@ -1,0 +1,8 @@
+"0","game_s2_2 <- game_s2 %>%"
+"0","  group_by(Country_Sales) %>%"
+"0","  filter(Year != ""N/A"") %>%"
+"0","  filter(Country_Sales %in% c(""NA_Sales"", ""EU_Sales"", ""JP_Sales"")) %>%"
+"0","  filter(Platform %in% c(""Wii"", ""PS4"", ""PC"", ""XB"")) %>%"
+"0","  filter(Publisher %in% c(""Nintendo"", ""Microsoft Game Studios"", ""Take-Two Interactive"", ""Sony Computer Entertainment""))"
+"0","  #filter(Year > 2000)"
+"0","  #filter(Rank < 499)"
